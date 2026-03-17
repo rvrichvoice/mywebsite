@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nyokiri Global Minerals Ltd</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- Force browser to load latest CSS -->
+  <link rel="stylesheet" href="style.css?v=20260317">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
     <div class="logo">
-<img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/ChatGPT%20Image%20Mar%209,%202026,%2003_38_11%20AM-Photoroom.png" alt="Logo">
+      <img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/ChatGPT%20Image%20Mar%209,%202026,%2003_38_11%20AM-Photoroom.png" alt="Logo">
     </div>
     <nav>
       <a href="#">Home</a>
@@ -19,6 +20,11 @@
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -42,55 +48,49 @@
   <section id="services" class="services">
     <h2>Our Services</h2>
     <div class="service-container">
-
       <div class="card" onclick="openModal('logistics')">
         <img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/WhatsApp%20Image%202026-03-06%20at%2014.39.50%20(1).jpeg" alt="Logistics">
         <h3>Logistics</h3>
         <p>Efficient cargo transportation and documentation services.</p>
       </div>
-
       <div class="card" onclick="openModal('metals')">
         <img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/WhatsApp%20Image%202026-03-06%20at%2014.39.50.jpeg" alt="Precious Metals">
         <h3>Precious Metals</h3>
         <p>Responsible sourcing and trading of gold and minerals.</p>
       </div>
-
       <div class="card" onclick="openModal('stones')">
         <img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/WhatsApp%20Image%202026-03-06%20at%2014.39.50%20(2).jpeg" alt="Precious Stones">
         <h3>Precious Stones</h3>
         <p>Supplying high-quality gemstones worldwide.</p>
       </div>
-
       <div class="card" onclick="openModal('refinery')">
         <img src="https://raw.githubusercontent.com/rvrichvoice/GGGG/main/WhatsApp%20Image%202026-03-06%20at%2014.39.50%20(3).jpeg" alt="Refinery">
         <h3>Refinery</h3>
         <p>Advanced refining services for metals and minerals.</p>
       </div>
-
     </div>
   </section>
 
   <!-- MODALS -->
-<div id="logisticsModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('logistics')">&times;</span>
-    <h2>Logistics Services</h2>
-    <p>We provide safe, fast, and reliable transportation for minerals worldwide.</p>
-    <img src="https://raw.githubusercontent.com/rvrichvoice/LOGISTICS/refs/heads/main/images%20(5).jfif" 
-         alt="Truck 1">
-    <img src="https://raw.githubusercontent.com/rvrichvoice/LOGISTICS/main/seko-logistics-taps-freightos-integration-to-scale-global-air-and-ground-quoting-and-booking.png" alt="Truck 2">
+  <div id="logisticsModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('logistics')">&times;</span>
+      <h2>Logistics Services</h2>
+      <p>We provide safe, fast, and reliable transportation for minerals worldwide.</p>
+      <img src="https://raw.githubusercontent.com/rvrichvoice/LOGISTICS/refs/heads/main/images%20(5).jfif" alt="Truck 1">
+      <img src="https://raw.githubusercontent.com/rvrichvoice/LOGISTICS/main/seko-logistics-taps-freightos-integration-to-scale-global-air-and-ground-quoting-and-booking.png" alt="Truck 2">
+    </div>
   </div>
-</div>
 
   <div id="metalsModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('metals')">&times;</span>
-    <h2>Precious Metals</h2>
-    <p>Responsible sourcing and trading of gold, silver, and other valuable metals worldwide.</p>
-    <img src="https://raw.githubusercontent.com/rvrichvoice/PRACIOUS-METAL/main/Gold-Nugget-Title-Images-5.png" alt="Gold">
-    <img src="https://raw.githubusercontent.com/rvrichvoice/PRACIOUS-METAL/main/responsible-sourcing-policy-page.jpg" alt="Silver">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('metals')">&times;</span>
+      <h2>Precious Metals</h2>
+      <p>Responsible sourcing and trading of gold, silver, and other valuable metals worldwide.</p>
+      <img src="https://raw.githubusercontent.com/rvrichvoice/PRACIOUS-METAL/main/Gold-Nugget-Title-Images-5.png" alt="Gold">
+      <img src="https://raw.githubusercontent.com/rvrichvoice/PRACIOUS-METAL/main/responsible-sourcing-policy-page.jpg" alt="Silver">
+    </div>
   </div>
-</div>
 
   <div id="stonesModal" class="modal">
     <div class="modal-content">
@@ -102,15 +102,15 @@
     </div>
   </div>
 
-<div id="refineryModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('refinery')">&times;</span>
-    <h2>Refinery Services</h2>
-    <p>Advanced refining services for metals and minerals, ensuring purity and quality compliance.</p>
-    <img src="https://raw.githubusercontent.com/rvrichvoice/REFINARY/main/Unbenannt-1.jpg" alt="Refinery 1">
-    <img src="https://raw.githubusercontent.com/rvrichvoice/REFINARY/main/images%20(8).jfif" alt="Refinery 2">
+  <div id="refineryModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('refinery')">&times;</span>
+      <h2>Refinery Services</h2>
+      <p>Advanced refining services for metals and minerals, ensuring purity and quality compliance.</p>
+      <img src="https://raw.githubusercontent.com/rvrichvoice/REFINARY/main/Unbenannt-1.jpg" alt="Refinery 1">
+      <img src="https://raw.githubusercontent.com/rvrichvoice/REFINARY/main/images%20(8).jfif" alt="Refinery 2">
+    </div>
   </div>
-</div>
 
   <!-- CONTACT -->
   <section id="contact" class="contact">
@@ -123,21 +123,28 @@
     </form>
   </section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 Nyokiri Global Minerals Ltd. All Rights Reserved.</p>
-
-  <div class="footer-contact">
-    <p><strong>Email:</strong> info@nyokiriglobalminerals.com</p>
-    <p><strong>Address:</strong> Off kiambu Road, Ridgeways Nairobi, Kenya</p>
-    <p><strong>Business Hours:</strong> Mon – Fri: 8:00 AM – 5:00 PM</p>
-    <p><strong>Weekend Hours:</strong> Sat: 9:00 AM – 4:00 PM, Sun: Closed</p>
-  </div>
-</footer>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Nyokiri Global Minerals Ltd. All Rights Reserved.</p>
+    <div class="footer-contact">
+      <p><strong>Email:</strong> info@nyokiriglobalminerals.com</p>
+      <p><strong>Address:</strong> Off kiambu Road, Ridgeways Nairobi, Kenya</p>
+      <p><strong>Business Hours:</strong> Mon – Fri: 8:00 AM – 5:00 PM</p>
+      <p><strong>Weekend Hours:</strong> Sat: 9:00 AM – 4:00 PM, Sun: Closed</p>
+    </div>
+  </footer>
 
   <a href="https://wa.me/254722121454" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
+
+  <!-- Hamburger menu script -->
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('header nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
   <script src="script.js"></script>
 </body>
