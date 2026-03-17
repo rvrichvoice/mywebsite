@@ -9,14 +9,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* reduced padding for small screens */
+  padding: 0 20px;
   height: 100px;
   background: linear-gradient(90deg, #111, #222);
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 /* LOGO */
@@ -80,7 +80,7 @@ nav a:hover {
 }
 
 .hero-content h1 {
-  font-size: 3rem; /* smaller on mobile */
+  font-size: 3rem;
   margin-bottom: 15px;
 }
 
@@ -104,7 +104,7 @@ nav a:hover {
 
 /* ABOUT */
 .about {
-  padding: 40px 20px; /* reduced padding for small screens */
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -162,7 +162,49 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* MODALS remain unchanged */
+/* MODALS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  margin-bottom: 10px;
+}
+
+.modal-content img {
+  width: 90%;
+  max-width: 350px;
+  margin: 5px;
+  border-radius: 8px;
+  display: inline-block; /* makes multiple images appear side by side if enough space */
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
 
 /* CONTACT */
 .contact {
@@ -244,6 +286,20 @@ footer {
   transform: scale(1.1);
 }
 
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   header {
@@ -254,8 +310,24 @@ footer {
   }
 
   nav {
+    display: none;
     flex-direction: column;
     gap: 10px;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .hero-content h1 {
@@ -287,8 +359,12 @@ footer {
   .contact {
     padding: 30px 15px;
   }
-}
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
+  /* Modal images stack nicely on small screens */
+  .modal-content img {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    display: block;
+  }
 }
