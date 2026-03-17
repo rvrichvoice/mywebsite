@@ -7,7 +7,7 @@ body {
 /* HEADER */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* logo left, nav/hamburger right */
   align-items: center;
   padding: 0 20px;
   height: 100px;
@@ -16,23 +16,22 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: wrap;
 }
 
 /* LOGO */
 .logo img {
-  height: 120px; /* smaller logo for mobile */
+  height: 150px; /* adjust as needed */
   width: auto;
 }
 
-.logo {
+/* NAV */
+nav {
   display: flex;
+  gap: 20px;
   align-items: center;
 }
 
-/* NAV */
 nav a {
-  margin: 0 10px;
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -40,6 +39,89 @@ nav a {
 
 nav a:hover {
   color: gold;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none; /* hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  /* Keep header flex row to have logo left and hamburger right */
+  header {
+    flex-direction: row; /* important! */
+    justify-content: space-between;
+    align-items: center;
+    height: 80px; /* smaller height for mobile */
+    padding: 0 15px;
+  }
+
+  nav {
+    display: none; /* hide nav initially */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+    background: #111;
+    position: absolute;
+    top: 80px; /* below header */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex; /* show hamburger on mobile */
+  }
+
+  /* Adjust hero text and buttons for mobile */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .service-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .about {
+    padding: 30px 15px;
+  }
+
+  .services {
+    padding: 50px 15px;
+  }
+
+  .contact {
+    padding: 30px 15px;
+  }
+
+  .modal-content img {
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 0;
+    display: block;
+  }
 }
 
 /* HERO */
