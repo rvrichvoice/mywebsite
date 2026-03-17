@@ -9,7 +9,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px; /* clean balanced spacing */
+  padding: 0 15px 0 5px; /* smaller left padding */
   height: 80px;
   background: linear-gradient(90deg, #111, #222);
   color: white;
