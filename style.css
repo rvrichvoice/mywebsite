@@ -9,8 +9,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 15px; /* add vertical space */
-  min-height: 90px; /* allow logo to fit */
+  padding: 0 15px; /* clean balanced spacing */
+  height: 80px;
   background: linear-gradient(90deg, #111, #222);
   color: white;
   position: sticky;
