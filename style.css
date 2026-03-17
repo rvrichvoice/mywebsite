@@ -20,7 +20,7 @@ header {
 
 /* LOGO */
 .logo img {
-  height: 60px; /* FIXED for mobile */
+  height: 150px; /* FIXED for mobile */
   width: auto;
 }
 
