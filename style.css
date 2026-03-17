@@ -25,7 +25,7 @@ header {
 
 /* LOGO IMAGE */
 .logo img {
-  height: 120px;   /* ✅ correct place */
+  height: 150px;   /* ✅ correct place */
   width: auto;
   display: block;
 }
