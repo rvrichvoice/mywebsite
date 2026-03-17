@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 5px 15px; /* add vertical space */
-  min-height: 120px; /* allow logo to fit */
+  min-height: 90px; /* allow logo to fit */
   background: linear-gradient(90deg, #111, #222);
   color: white;
   position: sticky;
