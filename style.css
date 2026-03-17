@@ -18,10 +18,16 @@ header {
   z-index: 1000;
 }
 
-/* LOGO */
+/* LOGO CONTAINER */
+.logo {
+  margin-left: -5px; /* optional small shift to edge */
+}
+
+/* LOGO IMAGE */
 .logo img {
-  height: 170px; /* FIXED for mobile */
+  height: 55px;   /* ✅ correct place */
   width: auto;
+  display: block;
 }
 
 /* NAV */
